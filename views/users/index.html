@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block headerLinks %}
+<base href="{{ baseHref }}" />
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="modal show" ng-app="auth">
+    <div class="modal-dialog">
+        <ng-view></ng-view>
+    </div>
+</div>
+{% endblock %}
+
+{% block footerJs %}
+{{ parent() }}
+    <script src="/public/vendor/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/public/users/app.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}

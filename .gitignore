@@ -1,0 +1,12 @@
+node_modules/
+
+access.log
+
+.vagrant/
+
+# client builds
+public/
+
+.__browserify_string_empty.js
+
+

@@ -1,0 +1,37 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1>Sign In</h1>
+        </div>
+        <div class="modal-body">
+            <form class="form center-block" autocomplete="off" method="post" ng-submit="submit('/users/login')">
+                <div class="form-group" ng-class="{'has-error': errors.email.length > 0}">
+                    <input class="form-control input-lg" type="email" name="email" placeholder="Email"
+                    ng-model="values.email" required />
+
+                    <span class="help-block" ng-repeat="error in errors.email">
+                        {{ error }}
+                    </span>
+                </div>
+                <div class="form-group" ng-class="{'has-error': errors.password.length > 0}">
+                    <input class="form-control input-lg" type="password" name="password" placeholder="Password"
+                        ng-model="values.password" required />
+
+                    <span class="help-block" ng-repeat="error in errors.password">
+                        {{ error }}
+                    </span>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+
+                    <span class="help-block" ng-repeat="error in errors.submit">
+                        {{ error }}
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#/register">Register</a>
+        </div>
+    </div>
+</div>

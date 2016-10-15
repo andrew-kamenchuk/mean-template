@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ parent() }}
+<div class="container">
+    <a class="pull-right" href="/users/logout">Sign Out</a>
+</div>
+{% endblock %}
+
+{% block body %}
+<h2 class="text-center">Hello, {{ username | title }}!</h2>
+{% endblock %}

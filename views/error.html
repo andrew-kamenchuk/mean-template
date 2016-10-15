@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% set title = "Error" %}
+
+{% block header %}
+    {{ parent() }}
+    <h1 class="text-center">Error: {{ status }} </h1>
+{% endblock %}
+
+{% block body %}
+<h2 class="text-center">
+    {{ message }}
+</h2>
+{% endblock %}

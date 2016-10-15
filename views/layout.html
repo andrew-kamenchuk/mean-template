@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="{{ charset | default('utf-8') }}" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{{ title | default("MEAN Template") }}</title>
+
+    {% block headerLinks %}
+    <link rel="stylesheet" href="/public/vendor/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/public/vendor/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
+    {% endblock %}
+
+</head>
+<body>
+    <header>
+    {% block header %}
+    {% endblock %}
+    </header>
+
+    <div class="container" id="main">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    <footer>
+    {% block footer %}
+    {% endblock %}
+    </footer>
+
+    {% block footerJs %}
+    <script src="/public/vendor/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    {% endblock %}
+</body>
+</html>
